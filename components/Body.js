@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import RestaurantCard from "./components/RestaurantCard";
+import RestaurantCard from "./RestaurantCard";
+import { Link } from "react-router-dom";
 
 const Body = () => {
   const [allRestaurants, setAllRestaurants] = useState(null);
@@ -20,7 +21,11 @@ const Body = () => {
     <>
       <div className="res-list">
         {allRestaurants.map((ele) => {
-          return <RestaurantCard {...ele.data} key={ele.data.id} />;
+          return (
+            <Link to={"/restaurant-menu/" + ele.data.id} key={ele.data.id}>
+              <RestaurantCard {...ele.data} />
+            </Link>
+          );
         })}
       </div>
     </>

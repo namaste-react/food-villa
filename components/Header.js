@@ -1,16 +1,24 @@
-import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
     <div className="header">
-      <img
-        src="https://logos-world.net/wp-content/uploads/2020/11/Swiggy-Logo.png"
-        alt="Swiggy"
-      />
+      <Link to="/">
+        <img
+          src="https://logos-world.net/wp-content/uploads/2020/11/Swiggy-Logo.png"
+          alt="Swiggy"
+        />
+      </Link>
       <div className="items">
-        <li className="item">Offers</li>
-        <li className="item">Sign in</li>
-        <li className="item">Cart</li>
+        <Link to="/offers">
+          <li className="item">Offers</li>
+        </Link>
+        <Link to="/signin">
+          <li className="item">Sign in</li>
+        </Link>
+        <Link to="cart">
+          <li className="item">Cart</li>
+        </Link>
       </div>
     </div>
   );

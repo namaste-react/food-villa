@@ -60,3 +60,10 @@ img {
   content: "";
   flex: auto;
 }
+
+.restaurant-data {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
